@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 쿠그린 (KHU Green)
 
-## Getting Started
+경희대학교 친환경 굿즈 쇼핑몰 - 재사용 컵홀더 & 텀블러
 
-First, run the development server:
+## 프로젝트 소개
+
+쿠그린은 경희대학교의 "KHU"와 환경을 의미하는 "그린(Green)"을 결합한 이름입니다.
+일회용품 사용을 줄이고 지속 가능한 캠퍼스 문화를 만들기 위한 친환경 굿즈 쇼핑몰입니다.
+
+## 주요 기능
+
+- ✅ 상품 목록 및 카테고리 필터링 (컵홀더/텀블러)
+- ✅ 상품 상세 페이지
+- ✅ 장바구니 기능 (LocalStorage 사용)
+- ✅ 주문/결제 페이지
+- ✅ 반응형 디자인 (모바일/태블릿/데스크톱)
+- ✅ 경희대 브랜드 컬러 디자인 시스템
+
+## 기술 스택
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks + LocalStorage
+- **Font**: Noto Sans KR, Geist
+
+## 시작하기
+
+### 개발 서버 실행
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000) 으로 접속하세요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 빌드
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 프로젝트 구조
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                    # Next.js App Router 페이지
+│   ├── page.tsx           # 홈페이지
+│   ├── products/          # 상품 목록 & 상세
+│   ├── cart/              # 장바구니
+│   ├── checkout/          # 주문/결제
+│   └── about/             # 소개 페이지
+├── components/
+│   ├── layout/            # Header, Footer
+│   └── ui/                # Button, ProductCard 등
+├── data/                  # 상품 데이터
+└── lib/                   # Types 정의
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 디자인 컬러
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Primary Green**: #22c55e (친환경)
+- **Secondary Blue**: #0ea5e9 (경희대)
+- **Accent Amber**: #f59e0b (활력)
 
-## Deploy on Vercel
+## 다음 단계
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] 실제 결제 시스템 연동 (Toss Payments, KakaoPay 등)
+- [ ] 백엔드 API 연동 (상품/주문 관리)
+- [ ] 사용자 인증 시스템
+- [ ] 관리자 페이지
+- [ ] 상품 이미지 업로드
+- [ ] 리뷰 시스템
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 라이센스
+
+MIT

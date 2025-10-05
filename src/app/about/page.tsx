@@ -19,7 +19,7 @@ export default function AboutPage() {
                 쿠그린이란?
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                쿠그린은 경희대학교의 "KHU"와 환경을 의미하는 "그린(Green)"을 결합한 이름입니다.
+                쿠그린은 경희대학교의 &quot;KHU&quot;와 환경을 의미하는 &quot;그린(Green)&quot;을 결합한 이름입니다.
                 우리는 경희대학교 학생들의 일상생활에서 시작되는 작은 환경 보호 실천을 응원하고,
                 지속 가능한 캠퍼스 문화를 만들어가는 것을 목표로 합니다.
               </p>

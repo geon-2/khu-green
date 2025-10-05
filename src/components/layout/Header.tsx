@@ -7,31 +7,39 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-white via-primary-light/10 to-white shadow-lg sticky top-0 z-50 border-b-2 border-primary/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-3xl">🌱</div>
-            <span className="text-2xl font-bold text-primary">쿠그린</span>
+          <Link href="/" className="flex items-center space-x-2 group">
+            <div className="text-3xl group-hover:scale-110 transition-transform">🌱</div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                쿠그린
+              </span>
+              <span className="text-xs text-gray-600 -mt-1">♻️ Eco-Friendly</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              홈
+            <Link href="/" className="text-gray-700 hover:text-primary transition-colors font-medium flex items-center gap-1">
+              <span>🏠</span>
+              <span>홈</span>
             </Link>
-            <Link href="/products" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              상품
+            <Link href="/products" className="text-gray-700 hover:text-primary transition-colors font-medium flex items-center gap-1">
+              <span>🛍️</span>
+              <span>상품</span>
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              소개
+            <Link href="/about" className="text-gray-700 hover:text-primary transition-colors font-medium flex items-center gap-1">
+              <span>💚</span>
+              <span>소개</span>
             </Link>
             <Link href="/cart" className="relative">
-              <button className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition-colors">
-                <span className="flex items-center space-x-1">
-                  <span>🛒</span>
-                  <span>장바구니</span>
+              <button className="bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark text-white px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg">
+                <span className="flex items-center space-x-2">
+                  <span className="text-lg">🛒</span>
+                  <span className="font-semibold">장바구니</span>
                 </span>
               </button>
             </Link>

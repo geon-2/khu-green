@@ -4,6 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { products } from '@/data/products';
 import Button from '@/components/ui/Button';
 import { useState } from 'react';
+import { CartItem } from '@/lib/types';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -26,8 +27,8 @@ export default function ProductDetailPage() {
   }
 
   const handleAddToCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const existingItem = cart.find((item: any) => item.product.id === product.id);
+    const cart: CartItem[] = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existingItem = cart.find((item) => item.product.id === product.id);
 
     if (existingItem) {
       existingItem.quantity += quantity;
